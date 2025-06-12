@@ -13,7 +13,7 @@ import {
 export const CIRCLE_ELEMENT_CARD_DATA: ICircleElementCardData[] = [
   {
     icon: <IconPercent />,
-    isFree: false,
+    isFree: true,
     text: "Offer",
     url_view: "",
   },

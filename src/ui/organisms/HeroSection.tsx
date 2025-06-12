@@ -18,10 +18,10 @@ export default function HeroSection(): React.ReactNode {
   }, []);
 
   return (
-    <section className="flex justify-center items-center bg-gradient-to-b from-[var(--color-main)] to-[var(--color-gray-light)]">
+    <section className="overflow-x-hidden flex justify-center items-center bg-gradient-to-b from-[var(--color-main)] to-[var(--color-gray-light)] pl-[var(--padding-small)] pr-[var(--padding-small)]">
       <AnimatePresence mode="wait">
         <motion.div
-          className="flex items-center w-[94vw] h-[200px] md:h-[400px] lg:h-[500px] relative"
+          className="flex items-center w-full h-[200px] md:h-[400px] lg:h-[500px] relative"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}

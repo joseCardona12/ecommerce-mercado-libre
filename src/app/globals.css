@@ -10,6 +10,10 @@
   --color-main: #ffe600;
   --color-gray-paragraph: #666666;
   --color-green: #14a956;
+  --color-blue: #3483fa;
+  --color-blue-hover: #2f73da;
+  --color-purple-gradient: #441668;
+  --color-pink-gradient: #a90f90;
 
   /*Spacing*/
   --padding-small: 0.8rem;

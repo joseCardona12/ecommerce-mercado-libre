@@ -2,5 +2,6 @@
 export interface IClassVariantButton {
     default:string,
     outline:string,
-    secondary:string
+    secondary:string,
+    ghost: string
 }

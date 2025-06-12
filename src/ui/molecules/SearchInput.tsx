@@ -1,4 +1,5 @@
-import { IconSearch } from "../../../../public/icons";
+
+import { IconSearch } from "../../../public/icons";
 import Input from "../atoms/Input";
 
 export default function SearchInput(): React.ReactNode {

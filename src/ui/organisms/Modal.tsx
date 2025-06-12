@@ -1,7 +1,7 @@
 import { ISizeVariantModal } from "@/interfaces/sizeVariantModa";
-import { IconClose } from "../../../../public/icons";
 import Button from "../atoms/Button";
 import { AnimatePresence, motion } from "framer-motion";
+import { IconClose } from "../../../public/icons";
 
 interface IModalProps {
   open: boolean;
@@ -9,12 +9,14 @@ interface IModalProps {
   title: string;
   description: string;
   setOpenModal: (value: boolean) => void;
+  children: React.ReactNode;
 }
 export default function Modal({
   open,
   variant,
   title,
   description,
+  children,
   setOpenModal,
 }: IModalProps): React.ReactNode {
   const sizeVariant: ISizeVariantModal = {
@@ -31,12 +33,12 @@ export default function Modal({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
-            className={`${sizeVariant[variant]} relative bg-white rounded-[var(--border-radius-small)] p-[var(--padding-small)] shadow-sm`}
+            className={`${sizeVariant[variant]} relative bg-white rounded-[var(--border-radius-small)] p-[var(--padding-medium)] shadow-sm flex flex-col gap-4`}
           >
             <Button
               onClick={() => setOpenModal(!open)}
               variant="outline"
-              className="absolute top-2 right-2"
+              className="absolute top-4 right-4"
             >
               <IconClose className="h-4 w-4" />
             </Button>
@@ -46,6 +48,7 @@ export default function Modal({
                 {description}
               </p>
             </div>
+            {children}
           </motion.div>
         </div>
       )}

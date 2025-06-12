@@ -1,7 +1,5 @@
-import Header from "@/app/ui/organisms/Header";
+import HomeSection from "@/ui/templates/HomeTemplate";
 
-export default function HomeView(){
-    return (
-        <Header />
-    )
+export default function HomeView() {
+  return <HomeSection />;
 }

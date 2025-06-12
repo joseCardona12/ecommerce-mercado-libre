@@ -3,6 +3,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /*color*/
+  --color-gray: #eeeded;
+  --color-gray-light: #f7f7f7;
+  --color-main: #ffe600;
+  --color-gray-paragraph: #666666;
+
+  /*Spacing*/
+  --padding-small: 0.8rem;
+  --padding-medium: 1rem;
+  --padding-big: 2rem;
+  --padding-extra-big: 3rem;
+
+  /*border radius*/
+  --border-radius-small: 6px;
+  --border-radius-medium: 15px;
 }
 
 @theme inline {
@@ -12,11 +28,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
 
 body {

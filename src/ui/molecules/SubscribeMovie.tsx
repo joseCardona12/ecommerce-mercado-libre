@@ -1,8 +1,14 @@
-import { PRICE_MONTH_PLAN_MOVIE } from "@/utils/constants/freeShipping";
+import {
+  PORCENT_FREE_SHIPPING_PLAN_MOVIE,
+  PRICE_FREE_SHIPPING_PLAN_MOVIE,
+  PRICE_FREE_SHIPPING_PLAN_MOVIE_SECOND,
+  PRICE_MONTH_PLAN_MOVIE,
+} from "@/utils/constants/freeShipping";
 import transformToPesos from "@/utils/transformToPesos";
 import Button from "../atoms/Button";
 import Line from "../atoms/line";
 import { IconArrowRight } from "../../../public/icons";
+import ButtonImage from "./ButtonImage";
 
 export default function SubscribeMovie(): React.ReactNode {
   return (
@@ -15,14 +21,20 @@ export default function SubscribeMovie(): React.ReactNode {
       </div>
       <div className="p-[var(--padding-small)] flex flex-col gap-2">
         <h3>Get the best benefits in Mercado Libre</h3>
-        <div className="flex items-center gap-2">
-          <Button variant="outline">Disney</Button>
-          <p>Disney+Include</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Button variant="outline">Disney</Button>
-          <p>Disney+Include</p>
-        </div>
+        <ButtonImage
+          alt_image="image-brand-disney"
+          url_image="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/widget-l6/disney_plus_widget_dark.png"
+          text="Disney+Include"
+        />
+        <ButtonImage
+          alt_image="image-brand-disney"
+          url_image="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/widget-l6/disney_plus_widget_dark.png"
+          text={`Free and fast shipping from ${transformToPesos(
+            Number(PRICE_FREE_SHIPPING_PLAN_MOVIE)
+          )} and ${PORCENT_FREE_SHIPPING_PLAN_MOVIE}% OFF on shipments from ${transformToPesos(
+            Number(PRICE_FREE_SHIPPING_PLAN_MOVIE_SECOND)
+          )} keep onwards`}
+        />
       </div>
       <Line />
       <Button

@@ -13,7 +13,7 @@ export default function HeroSection(): React.ReactNode {
       setIndexImage((prev) => {
         return prev + 1 < HERO_SLIDE_DATA.length ? prev + 1 : 0;
       });
-    }, 3000);
+    }, 9000);
     return () => clearInterval(interval);
   }, []);
 
